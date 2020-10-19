@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#box {
+    width: 330px;
+    height: 300px;
+    margin: auto;
+    margin-top: 100px
+}
+
+.ys {
+    border: 1px solid;
+    width: 30px;
+    height: 30px;
+    float: left;
+}
+
+.bg {
+
+    background: pink;
+
+}
+
+.LEI1 {
+    background-image: url(./img/lei.jpg);
+    /* display: none; */
+}
+
+.LEI {
+
+    background: pink;
+}
+
+.meilei {
+    background: " ";
+}
+.biaoji{
+    background-image: url(./img/xiaoqizhi.jpg);
+    
+}

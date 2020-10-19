@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <tr>11
+            <tr>
+                11
+            </tr>
+        </tr>
+        <marquee bink behavior="444" direction="24">2333333333</marquee>
+    </div>
+  
+    <canvas style="border: 1px solid;" width="500px" height="500px" id="can"></canvas>
+    <script>
+        var canvas = document.getElementById("can").getContext('2d')
+        for (var i = 0; i < 10; i++) {
+            for (var j = 0; j < 10; j++) {
+                canvas.strokeRect(i * 50, j * 50, 50, 50)
+                if (i * 50 % 100 == 0 & j * 50 % 100 == 0 || i % 2 !== 0 & j % 2 !== 0) {
+                    canvas.fillRect(i * 50, j * 50, 50, 50)
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
