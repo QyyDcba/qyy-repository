@@ -1,0 +1,55 @@
+<meta>
+    meta标签通常用来为搜索引擎robots定义页面主题，或者是定义用户浏览器上的cookie；它可以用于鉴别作者，
+设定页面格式，标注内容提要和关键字；还可以设置页面使其可以根据你定义的时间间隔刷新自己,以及设置RASC内容等级，等等。
+
+★HTTP-EQUIV
+1、Content-Type和Content-Language (显示字符集的设定)
+用法：<Meta http-equiv="Content-Type" Content="text/html; Charset=gb2312"> 
+2、Refresh (刷新)
+说明：让网页多长时间（秒）刷新自己，或在多长时间后让网页自动链接到其它网页。 　　
+用法：<Meta http-equiv="Refresh" Content="30"> 　　　　　　
+<Meta http-equiv="Refresh" Content="5; Url=http://www.xia8.net"> 　　
+注意：其中的5是指停留5秒钟后自动刷新到URL网址。
+6、Window-target (显示窗口的设定)
+说明：强制页面在当前窗口以独立页面显示。 　　　
+用法：<Meta http-equiv="Widow-target" Content="_top"> 　　
+注意：这个属性是用来防止别人在框架里调用你的页面。Content选项：_blank、_top、_self、_parent。
+
+★NAME变量
+name是描述网页的，对应于Content（网页内容），以便于搜索引擎机器人查找、分类（目前几乎所有的搜索引擎都使用网上机器人
+自动查找meta值来给网页分类）。name的value值（name=""）指定所提供信息的类型。有些值是已经定义好的。例如description(说明)、
+keyword(关键字)、refresh(刷新)等。还可以指定其他任意值，如：creationdate(创建日期) 、 document ID(文档编号)和level(等级)等。
+name的content指定实际内容。如：如果指定level(等级)为value(值)，则Content可能是beginner(初级)、intermediate(中级)、advanced(高级)。
+1、Keywords (关键字) 　　说明：为搜索引擎提供的关键字列表 　　　
+用法：<Meta name="Keywords" Content="关键词1,关键词2，关键词3,关键词4,……"> 　　　
+注意：各关键词间用英文逗号“,”隔开。META的通常用处是指定搜索引擎用来提高搜索质量的关键词。当数个META元素提供文档语言从属信息时，
+搜索引擎会使用lang特性来过滤并通过用户的语言优先参照来显示搜索结果。
+例如： 　　　　　　
+<Meta name="Kyewords" Lang="EN" Content="vacation,greece,sunshine"> 　　　　
+<Meta name="Kyewords" Lang="FR" Content="vacances,grè:ce,soleil">
+2、Description (简介) 　　　说明：Description用来告诉搜索引擎你的网站主要内容。 　　　
+用法：<Meta name="Description" Content="你网页的简述"> 　
+3、Robots (机器人向导) 　　　说明：Robots用来告诉搜索机器人哪些页面需要索引，哪些页面不需要索引。Content的参数有all、none、index、noindex、follow、nofollow。默认是all。 　　
+用法：<Meta name="Robots" Content="All|None|Index|Noindex|Follow|Nofollow"> 　　　
+注意：许多搜索引擎都通过放出robot/spider搜索来登录网站，这些robot/spider就要用到meta元素的一些特性来决定怎样登录。
+all：文件将被检索，且页面上的链接可以被查询； 　　　
+none：文件将不被检索，且页面上的链接不可以被查询；(和 "noindex, no follow" 起相同作用) 　　　
+index：文件将被检索；（让robot/spider登录） 　　　
+follow：页面上的链接可以被查询； 　　　
+noindex：文件将不被检索，但页面上的链接可以被查询；(不让robot/spider登录) 　　　
+nofollow：文件将不被检索，页面上的链接可以被查询。(不让robot/spider顺着此页的连接往下探找)
+
+★Head中的其它一些用法
+1、scheme (方案) 说明：scheme can be used when name is used to specify how the value of content should 　　　　　　be interpreted. 　　　
+用法：<meta scheme="ISBN" name="identifier" content="0-14-043205-1" /> 　　　
+2、Link (链接) 　　　说明：链接到文件
+用法：<Link href="soim.ico" rel="Shortcut Icon">
+注意：很多网站如果你把她保存在收件夹中后，会发现它连带着一个小图标，如果再次点击进入之后还会发现地址栏中也有个小图标。
+现在只要在你的页头加上这段话，就能轻松实现这一功能。<LINK> 用来将目前文件与其它 URL 作连结，但不会有连结按钮，
+用於 <HEAD> 标记间， 
+格式如下： 　<link href="URL" rel="relationship"> 　　<link href="URL" rev="relationship">
+3、Base (基链接) 　　　说明：插入网页基链接属性
+用法：<Base href="http://www.xia8.net/" target="_blank">
+注意：你网页上的所有相对路径在链接时都将在前面加上“http://www.cn8cn.com/”。
+其中target="_blank"是链接文件在新的窗口中打开，你可以做其他设置。将“_blank”改为“_parent”是链接文件将在当前窗口的
+父级窗口中打开；改为“_self”链接文件在当前窗口（帧）中打开；改为“_top”链接文件全屏显示。
